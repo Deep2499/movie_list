@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list_item{
+            border: 1px solid;
+            display: flex;
+
+            width: 100%;
+        }
+        .image_container{
+            width: 50%;
+
+            height: 300px;
+            object-fit: contain;
+        }
+        .title_type_year_container{
+            width: 50%;
+        }
+        .image_container .poster{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" class="search_field">
+    <button class="search_button">Search</button>
+    <div class="total_movies_in_this_page"></div>
+    <div>List of Movies</div>
+    <ul class="list_of_movies"></ul>
+    <div class="pages"></div>
+    <button class="page_decrease">page decrease</button>
+    <button class="page_increase">page increase</button>
+
+    <script src="./script.js"></script>
+</body>
+</html>
