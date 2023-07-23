@@ -5,37 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(180deg, rgb(236, 0, 0), rgb(255, 255, 255));
+            background-repeat: no-repeat;
+        }
         .list_item{
             border: 1px solid;
             display: flex;
-
+            justify-content: space-around;
             width: 100%;
+            align-items: center;
+            margin: 15px;
         }
         .image_container{
-            width: 50%;
-
+            width: 40%;
             height: 300px;
-            object-fit: contain;
+            object-fit: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .title_type_year_container{
-            width: 50%;
+            width: 40%;
         }
         .image_container .poster{
-            height: 100%;
+            height: 80%;
+            width: 80%;
+        }
+        ul{
+            list-style: none;
+        }
+        .title_type_year_container div{
+            margin: 10px;
+        }
+        .full_container{
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
         }
     </style>
 </head>
 <body>
-    <input type="text" class="search_field">
+    <div class="full_container" >
+            <div style="font-size: 2rem; margin: 10px; font-weight: bold;">IMDB Movies List</div>
+            <input type="text" class="search_field" style="margin: 10px;">
+            <button class="search_button" style="margin: 10px;">Search</button>
+            <div class="total_movies_in_this_page"></div>
+        <ul class="list_of_movies"></ul>
+        <div class="pages"></div>
+        <div class="page_control" style="display: flex;">
+            <div class="page_decrease" style="margin-right: 5px;"><img src="./left-arrow.png" width="10"></div>
+            <div class="page_info"></div>
+            <div class="page_increase" style="margin-left: 5px;"><img src="./right-arrow.png" width="10"></div>
+        </div>
+    </div>
+    <!--<input type="text" class="search_field">
     <button class="search_button">Search</button>
     <div class="total_movies_in_this_page"></div>
-    <div>List of Movies</div>
     <ul class="list_of_movies"></ul>
     <div class="pages"></div>
     <button class="page_decrease">page decrease</button>
     <button class="page_increase">page increase</button>
-
+    -->
     <script src="./script.js"></script>
 </body>
 </html>
